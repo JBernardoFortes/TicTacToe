@@ -147,4 +147,21 @@ body .app .game .board:hover > :not(.square:hover) {
 
 .text:hover {
   filter: brightness(1.1);
+}
+
+@media screen and (max-width: 500px) {
+  .app .game .board {
+    gap: 3vw !important;
+    width: 80vw !important;
+    height: 40vh !important;
+    font-size: 1em;
+  }
+  .app .game .square {
+    width: 100%;
+  }
+  .app .game .button {
+    width: 40vw !important;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+  }
 }/*# sourceMappingURL=index.css.map */
