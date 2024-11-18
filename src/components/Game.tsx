@@ -23,14 +23,14 @@ const Game = () => {
       if (board[a] && board[a] == board[b] && board[a] == board[c]) {
         // Passa pelos indices dos possiveis ganhadores no board ^^
         setWinPath([a, b, c]);
-        console.log(board[a]);
+        // console.log(board[a]);
         return board[a]; // retorna o valor que venceu (X ou O)
       }
     }
     return null;
   };
   const feedBack = (board: any[], winner: any) => {
-    console.log(winner + "TESTE");
+    // console.log(winner + "TESTE");
     if (winner == "X" || winner == "O") {
       startButton?.classList.add("reset");
       setIsGoing(0);
