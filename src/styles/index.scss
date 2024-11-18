@@ -80,12 +80,15 @@ body {
           cursor: pointer;
           border-radius: 0.3em;
           transition: all 0.25s linear;
+          user-select: none;
+
           .insideSquare {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
+            user-select: none;
           }
         }
         .square:hover {
