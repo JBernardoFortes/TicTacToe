@@ -10,6 +10,8 @@
 body {
   background-color: var(--bistre);
   color: var(--peach);
+  user-select: none;
+
   .app {
     font-family: "Geist Mono";
     .game {

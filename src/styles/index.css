@@ -10,6 +10,9 @@
 body {
   background-color: var(--bistre);
   color: var(--peach);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 body .app {
   font-family: "Geist Mono";
