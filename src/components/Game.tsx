@@ -73,7 +73,7 @@ const Game = () => {
       return;
     }
 
-    // } // verifica se ja tem um vencedor ou se o quadrado ja esta preenchido
+    
     tempBoard[i] = xTurn ? "X" : "O"; // atribui o valor no square de acordo com o turno
     setBoard(tempBoard); // atualiza o board
     setXTurn(!xTurn); // Muda o turno para o proximo
