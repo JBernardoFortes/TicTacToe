@@ -23,14 +23,12 @@ const Game = () => {
       if (board[a] && board[a] == board[b] && board[a] == board[c]) {
         // Passa pelos indices dos possiveis ganhadores no board ^^
         setWinPath([a, b, c]);
-        // console.log(board[a]);
         return board[a]; // retorna o valor que venceu (X ou O)
       }
     }
     return null;
   };
   const feedBack = (board: any[], winner: any) => {
-    // console.log(winner + "TESTE");
     if (winner == "X" || winner == "O") {
       startButton?.classList.add("reset");
       setIsGoing(0);
@@ -55,22 +53,15 @@ const Game = () => {
 
   const startButtonRef = useRef<HTMLButtonElement>(null);
   let startButton = startButtonRef.current;
-  // let winner = calculateWinner(board); // toda vez que atualizar o valor do board vai ser calculado de novo o vencedor ^^
 
   const [winner, setWinner] = useState(null);
-  // let winner: any = null;
   // Calcular winner
   useEffect(() => {
     const winnerCalculated = calculateWinner(board);
     setWinner(winnerCalculated);
-    // console.log(winner);
     setFeedback(feedBack(board, winnerCalculated));
   }, [board]);
 
-  // useEffect(() => {
-  //   // adicionar a classe winPath nos indices que estao no winPath
-
-  // }, winPath);
 
   const [isGoing, setIsGoing] = useState(0);
   const handleClick = (i: number) => {
@@ -82,11 +73,8 @@ const Game = () => {
       return;
     }
 
-    // if (!!winner || !!tempBoard[i]) {
-    //   return;
     // } // verifica se ja tem um vencedor ou se o quadrado ja esta preenchido
     tempBoard[i] = xTurn ? "X" : "O"; // atribui o valor no square de acordo com o turno
-    // console.log(winner);
     setBoard(tempBoard); // atualiza o board
     setXTurn(!xTurn); // Muda o turno para o proximo
     setIsGoing(1);

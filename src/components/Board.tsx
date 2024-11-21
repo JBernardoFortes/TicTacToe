@@ -41,7 +41,6 @@ const Board = ({ board, handleClick, winPath }: Props) => {
             value={square}
             key={index}
             handleClick={() => handleClick(index)}
-            // winSquare={winPath.includes(index) ? true : false}
           />
         </motion.div>
       ))}
